@@ -144,7 +144,7 @@ checkoutBtn.addEventListener("click", function () {
     }
     const cartItems = cart.map((item) => {
         return (
-            `${item.name} Quantidade: ${item.quantity} Preço: R$${item.price} |`
+            `${item.name} Quantidade: ${item.quantity} Preço: R$${item.price} \n`
         )
     }).join("")
     //envio para whatsapp - PRECISA SER MELHORADO
