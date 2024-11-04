@@ -10,7 +10,6 @@ const addressInput = document.getElementById("address")
 const addressWarn = document.getElementById("address-warn")
 
 let cart = [];
-
 //Abrir o MODAL do carrinho
 cartBtn.addEventListener("click", function () {
     updateCartModal();
@@ -57,8 +56,8 @@ function addToCart(name, price) {
 
 //atualiza o carrinho
 function updateCartModal() {
-    cartItemsContainer.innerHTML = "";
     let total = 0;
+    cartItemsContainer.innerHTML = "";
     cart.forEach(item => {
         const cartItemsElement = document.createElement("div");
         cartItemsElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
@@ -144,7 +143,7 @@ checkoutBtn.addEventListener("click", function () {
     }
     const cartItems = cart.map((item) => {
         return (
-            `\n${item.name}\nQuantidade: ${item.quantity}\nPreço: R$${item.price}\n\nTotal: ${total}`
+            `\n${item.name}\nQuantidade: ${item.quantity}\nPreço: R$${item.price}\n\nTotal: ${cartTotal.textContent}`
         )
     }).join("")
     //envio para whatsapp - PRECISA SER MELHORADO
