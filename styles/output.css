@@ -893,8 +893,8 @@ video {
   height: 8rem;
 }
 
-.h-\[620px\] {
-  height: 620px;
+.h-\[670px\] {
+  height: 670px;
 }
 
 .h-full {
@@ -1455,20 +1455,16 @@ video {
   justify-items: stretch;
 }
 
+.gap-1 {
+  gap: 0.25rem;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-7 {
   gap: 1.75rem;
-}
-
-.gap-1 {
-  gap: 0.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
