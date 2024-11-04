@@ -143,16 +143,14 @@ checkoutBtn.addEventListener("click", function () {
     }
     const cartItems = cart.map((item) => {
         return (
-            `*PEDIDO*`
             `${item.name}\nQuantidade: ${item.quantity}\nPreço: R$${item.price}\n\n`
-            `Total: ${cartTotal.textContent}\n\n`
         )
     }).join("")
     //envio para whatsapp - PRECISA SER MELHORADO
     const message = encodeURIComponent(cartItems)
     const phone = "5581994066568"
 
-    window.open(`https://wa.me/${phone}?text=${message}Endereço: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${message}Endereço: ${addressInput.value} \n Total: ${cartTotal.textContent}\n\n`, "_blank")
     cart = [];
     updateCartModal();
 
